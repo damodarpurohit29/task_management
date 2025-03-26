@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoshTalks</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #ffffff 0%, #87CEEB 100%); /* White to sky blue gradient */
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px; /* Increased width for better spacing */
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        h3, h4 {
+            margin-top: 15px;
+            color: #555;
+        }
+        ul {
+            text-align: left;
+            padding-left: 20px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        li strong {
+            font-weight: bold;
+            padding: 3px 5px;
+            border-radius: 5px;
+        }
+        /* Colors for each technology */
+        .drf { background-color: #f8c471; color: #333; } /* Orange */
+        .jazzmin { background-color: #85c1e9; color: #333; } /* Light Blue */
+        .google-oauth { background-color: #e74c3c; color: #fff; } /* Red */
+        .mysql { background-color: #28b463; color: #fff; } /* Green */
+        .swagger { background-color: #f4d03f; color: #333; } /* Yellow */
+
+        .btn {
+            display: block;
+            margin: 15px auto;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            background-color: #4285f4; /* Official Google Blue */
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        h6 {
+            margin-top: 20px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Hi JoshTalks!</h2>
+        <h3>Thanks for the Opportunity.</h3>
+        <h4>I’ve implemented the project using:</h4>
+        <ul>
+            <li><strong class="drf">Django Rest Framework (DRF)</strong> - For API backend</li>
+            <li><strong class="jazzmin">Jazzmin</strong> - For Admin Panel Customization</li>
+            <li><strong class="google-oauth">Google OAuth</strong> - For Authentication</li>
+            <li><strong class="mysql">MySQL</strong> - For Database Management</li>
+            <li><strong class="swagger">Swagger</strong> - For API Documentation</li>
+        </ul>
+        <h2>Just one call away!</h2>
+        <h6>Looking forward to contributing and growing together!</h6>
+
+        <!-- Google OAuth Login -->
+        <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn">Sign in with Google</a>
+    </div>
+</body>
+</html>
